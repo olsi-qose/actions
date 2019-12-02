@@ -1,7 +1,4 @@
-#!/bin/sh
+#!/bin/sh -l
 
-set -e
-
-npm install
-
-NODE_PATH=node_modules node /action/lib/run.js
+npm --prefix /action install /action
+node /action/action.js
